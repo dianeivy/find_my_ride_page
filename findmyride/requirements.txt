@@ -1,6 +1,7 @@
 # data conversion
 numpy
 pandas
+scipy
 sklearn
 
 # web hosting

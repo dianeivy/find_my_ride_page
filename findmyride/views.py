@@ -148,7 +148,7 @@ def bike_list(bike_table_results):
 
     return np.array(bike_table_results)[top_station_indices[:5]], better_time_string
 
-@app.route('/input')
+@app.route('/')
 def cesareans_input():
     return render_template("index2.html")
 

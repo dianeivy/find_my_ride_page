@@ -1,0 +1,12 @@
+# data conversion
+numpy
+pandas
+sklearn
+
+# web hosting
+flask
+googlemaps
+convertdate
+
+# testing to do
+

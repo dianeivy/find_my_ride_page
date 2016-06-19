@@ -1,0 +1,143 @@
+,id,station_id,terminal,station_name,latitude,longitude,existing,num_events
+0,1,3,B32006,Colleges of the Fenway,42.340021,-71.100812,False,0
+1,2,4,C32000,Tremont St. at Berkeley St.,42.345392,-71.069616,False,0
+2,3,5,B32012,Northeastern U / North Parking Lot,42.341814,-71.090179,False,0
+3,4,6,D32000,Cambridge St. at Joy St.,42.361285,-71.06514,False,0
+4,5,7,A32000,Fan Pier,42.353412,-71.044624,False,0
+5,6,8,A32001,Union Square - Brighton Ave. at Cambridge St.,42.353334,-71.137313,False,0
+6,7,9,A32002,Agganis Arena - 925 Comm Ave.,42.351313,-71.116174,False,0
+7,8,10,A32003,B.U. Central - 725 Comm. Ave.,42.350075,-71.105884,False,0
+8,9,11,A32004,Longwood Ave / Binney St,42.338629,-71.1065,False,0
+9,10,12,B32002,Ruggles Station / Columbus Ave.,42.335911,-71.088496,False,0
+10,11,13,C32002,Boston Medical Center - 721 Mass. Ave.,42.334057,-71.07403,False,0
+11,12,14,B32003,HMS / HSPH - Ave. Louis Pasteur at Longwood Ave.,42.337171,-71.102797,False,0
+12,13,15,A32005,Harvard Real Estate - Brighton Mills - 370 Western Ave,42.361667,-71.13802,False,0
+13,14,16,C32003,Back Bay / South End Station,42.347433,-71.076163,False,0
+14,15,17,A32006,Harvard University Housing - 111 Western Ave. at Soldiers Field Park,42.365074,-71.119581,False,0
+15,16,18,A32007,Harvard Real Estate - 219 Western Ave. at North Harvard St.,42.36337,-71.129791,False,0
+16,17,19,A32008,Buswell Park,42.347527,-71.105828,False,0
+17,18,20,B32004,Aquarium Station - 200 Atlantic Ave.,42.35977,-71.051601,False,0
+18,19,21,C32007,Prudential Center / Belvidere,42.345959,-71.082578,False,0
+19,20,22,A32010,South Station - 700 Atlantic Ave.,42.352175,-71.055547,False,0
+20,21,23,B32008,Mayor Thomas M. Menino - Government Center,42.359677,-71.059364,False,0
+21,22,24,B32007,Seaport Square - Seaport Blvd. at Boston Wharf,42.351821,-71.045461,False,0
+22,23,25,A32009,Tremont St / W Newton St,42.341332,-71.076847,False,0
+23,24,26,D32002,Washington St. at Waltham St.,42.341522,-71.068922,False,0
+24,25,27,C32001,Roxbury Crossing Station,42.331567,-71.094734,False,0
+25,26,29,A32011,Innovation Lab - 125 Western Ave. at Batten Way,42.363732,-71.124565,False,0
+26,27,30,B32013,Brigham Cir / Huntington Ave,42.334073,-71.105221,False,0
+27,28,31,B32014,Seaport Hotel,42.348833,-71.041747,False,0
+28,29,32,B32015,Landmark Centre,42.343912,-71.102221,False,0
+29,30,33,B32010,Kenmore Sq / Comm Ave,42.349046,-71.096831,False,0
+30,31,34,B32009,Overland St at Brookline Ave,42.346171,-71.099855,False,0
+31,32,35,D32004,Summer St. / Arch St.,42.354594,-71.05896,False,0
+32,33,36,D32005,Boston Public Library - 700 Boylston St.,42.349673,-71.077303,False,0
+33,34,37,D32001,New Balance - 38 Guest St.,42.357247,-71.146452,False,0
+34,35,38,D32003,TD Garden - Legends Way,42.366231,-71.060868,False,0
+35,36,39,C32006,Washington St. at Rutland St.,42.338623,-71.074182,False,0
+36,37,40,D32006,Lewis Wharf - Atlantic Ave.,42.363871,-71.050877,False,0
+37,38,41,A32012,Packard's Corner - Comm. Ave. at Brighton Ave.,42.352261,-71.123831,False,0
+38,39,42,D32007,Boylston St. at Arlington St.,42.352096,-71.070378,False,0
+39,40,43,D32008,Rowes Wharf - Atlantic Ave,42.357143,-71.050699,False,0
+40,41,44,D32009,Faneuil Hall - Union St. at North St.,42.360583,-71.056868,False,0
+41,42,45,B32011,Yawkey Way at Boylston St.,42.344763,-71.09788,False,0
+42,43,46,B32005,Christian Science Plaza,42.343864,-71.085918,False,0
+43,44,47,D32010,Cross St. at Hanover St.,42.362811,-71.056067,False,0
+44,45,48,D32012,Post Office Square,42.356755,-71.055407,False,0
+45,46,49,D32011,Stuart St. at Charles St.,42.351146,-71.066289,False,0
+46,47,50,D32013,Boylston St / Berkeley St,42.350989,-71.073644,False,0
+47,48,51,C32005,Washington St. at Lenox St.,42.3348756,-71.0790969,False,0
+48,49,52,B32000,Newbury St / Hereford St,42.348717,-71.085954,False,0
+49,50,53,B32016,Beacon St / Mass Ave,42.350851,-71.089886,False,0
+50,51,54,D32014,Tremont St / West St,42.354979,-71.063348,False,0
+51,52,55,B32018,Boylston / Mass Ave,42.347265,-71.088088,False,0
+52,53,56,B32017,Dudley Square,42.3281898,-71.0833545,False,0
+53,54,57,C32004,Columbus Ave. at Mass. Ave.,42.340799,-71.081572,False,0
+54,55,58,D32017,The Esplanade - Beacon St. at Arlington St.,42.355596,-71.07278,False,0
+55,56,59,D32015,Chinatown Gate Plaza - Surface Rd. at Beach St.,42.351356,-71.059367,False,0
+56,57,60,D32016,Charles Circle - Charles St. at Cambridge St.,42.360877,-71.07131,False,0
+57,58,61,C32008,Boylston at Fairfield,42.348323,-71.082674,False,0
+58,59,62,B32019,Longwood Ave/Riverway,42.340299,-71.109927,False,0
+59,60,63,C32009,Dorchester Ave. at Gillette Park,42.344023,-71.057054,False,0
+60,61,64,C32010,Congress / Sleeper,42.3511,-71.0496,False,0
+61,62,65,D32018,Boston Convention & Exhibition Center,42.3475,-71.0441,False,0
+62,63,66,A32017,Allston Green District - Commonwealth Ave & Griggs St,42.348607,-71.13401,False,0
+63,64,67,M32006,MIT at Mass Ave / Amherst St,42.3581,-71.093198,False,0
+64,65,68,M32011,Central Square at Mass Ave / Essex St,42.36507,-71.1031,False,0
+65,66,69,K32001,Coolidge Corner - Beacon St @ Centre St,42.341598,-71.123338,False,0
+66,67,70,M32016,Harvard Kennedy School at Bennett St / Eliot St,42.372244,-71.121851,False,0
+67,68,71,S32004,Conway Park - Somerville Avenue,42.383405,-71.107593,False,0
+68,69,72,M32003,One Broadway / Kendall Sq at Main St / 3rd St,42.362613,-71.084105,False,0
+69,70,73,M32017,Harvard Square at Brattle St / Eliot St,42.373231,-71.120886,False,0
+70,71,74,M32018,Harvard Square at Mass Ave/ Dunster,42.373268,-71.118579,False,0
+71,72,75,M32009,Lafayette Square at Mass Ave / Main St / Columbia St,42.363562,-71.10042,False,0
+72,73,76,M32012,Central Sq Post Office / Cambridge City Hall at Mass Ave / Pleasant St,42.366426,-71.105495,False,0
+73,74,77,S32001,Somerville City Hall,42.386428,-71.096413,False,0
+74,75,78,S32002,Union Square - Somerville,42.379637,-71.095319,False,0
+75,76,79,S32003,Beacon St at Washington / Kirkland,42.378551,-71.106541,False,0
+76,77,80,M32005,MIT Stata Center at Vassar St / Main St,42.362429,-71.090188,False,0
+77,78,81,D32019,Boylston St / Washington St,42.352409,-71.062679,False,0
+78,79,82,K32002,Brookline Town Hall / Library Washington St,42.333689,-71.120526,False,0
+79,80,83,C32011,South Bay Plaza,42.325941,-71.065928,False,0
+80,81,84,M32019,CambridgeSide Galleria - CambridgeSide PL at Land Blvd,42.366981,-71.076472,False,0
+81,82,85,C32012,Andrew Station - Dorchester Ave at Humboldt Pl,42.330825,-71.057007,False,0
+82,83,86,K32003,Brookline Village - Station Street @ MBTA,42.332799,-71.116205,False,0
+83,84,87,M32014,Harvard University Housing - 115 Putnam Ave at Peabody Terrace,42.366621,-71.114214,False,0
+84,85,88,M32010,Inman Square at Vellucci Plaza / Hampshire St,42.374035,-71.101427,False,0
+85,86,89,M32020,Harvard Law School at Mass Ave / Jarvis St,42.379011,-71.119945,False,0
+86,87,90,M32001,Lechmere Station at Cambridge St / First St,42.3707,-71.07711,False,0
+87,88,91,M32002,One Kendall Square at Hampshire St / Portland St,42.366277,-71.09169,False,0
+88,89,92,C32014,University of Massachusetts Boston,42.311819,-71.035705,False,0
+89,90,93,C32013,JFK / UMASS Station,42.320494,-71.051122,False,0
+90,91,94,D32020,Charlestown - Main St at Austin St,42.375603,-71.064608,False,0
+91,92,95,M32007,Cambridge St - at Columbia St / Webster Ave,42.372969,-71.094445,False,0
+92,93,96,M32013,Cambridge Main Library at Broadway / Trowbridge St,42.373379,-71.111075,False,0
+93,94,97,M32015,Harvard  University River Houses at DeWolfe St / Cowperthwaite St,42.369182,-71.117152,False,0
+94,95,98,D32021,Charlestown - Warren St at Chelsea St,42.371848,-71.060292,False,0
+95,96,99,B32008,Mayor Thomas M. Menino - Government Center,42.35892,-71.057629,False,0
+96,97,100,B32017,Dudley Square,42.328654,-71.084198,False,0
+97,98,101,B32020,BIDMC - Brookline at Burlington St,42.345733,-71.100694,False,0
+98,99,102,C32002,Boston Medical Center -  East Concord at Harrison Ave,42.336437,-71.073089,False,0
+99,100,103,C32008,Boylston at Fairfield,42.348762,-71.082383,False,0
+100,101,104,C32012,Andrew Station - Dorchester Ave at Humboldt Pl,42.330716,-71.057044,False,0
+101,102,105,C32015,Mt Pleasant Ave / Dudley Town Common,42.325333,-71.075354,False,0
+102,103,106,C32016,West Broadway at Dorchester St,42.335693,-71.045859,False,0
+103,104,107,C32017,South Boston Library - 646 East Broadway,42.335741,-71.03877,False,0
+104,105,108,C32018,E. Cottage St at Columbia Rd,42.320561,-71.06198,False,0
+105,106,109,C32019,Upham's Corner - Ramsey St at Dudley St,42.317225,-71.065421,False,0
+106,107,110,D32001,New Balance - Guest St. at Life St.,42.356975,-71.145442,False,0
+107,108,111,D32003,TD Garden - Causeway at Portal Park #2,42.366222,-71.059914,False,0
+108,109,112,D32004,Franklin St. / Arch St.,42.355402,-71.058087,False,0
+109,110,113,D32016,Charles Circle - Charles St. at Cambridge St.,42.36069,-71.070884,False,0
+110,111,114,D32022,TD Garden - Causeway at Portal Park #1,42.365942,-71.060515,False,0
+111,112,115,D32023,Spaulding Rehabilitation Hospital - Charlestown Navy Yard,42.378338,-71.048927,False,0
+112,113,116,D32024,Charles St at Beacon St,42.356052,-71.069849,False,0
+113,114,117,D32025,Milk St at India St,42.358508,-71.052984,False,0
+114,115,118,D32026,Hayes Square at Vine St.,42.377022,-71.056605,False,0
+115,116,119,D32027,New Balance Store - Boylston at Dartmouth,42.350413,-71.07655,False,0
+116,117,120,E32001,JP Monument - South St at Centre St,42.309467,-71.115645,False,0
+117,118,121,E32002,JP Centre - Centre Street at Myrtle Street,42.31309,-71.114175,False,0
+118,119,122,E32003,Hyde Square at Barbara St,42.320998,-71.110833,False,0
+119,120,123,E32004,Egleston Square at Columbus Ave,42.315692,-71.098634,False,0
+120,121,124,E32005,Green St T,42.310579,-71.107341,False,0
+121,122,125,E32006,Jackson Square T at Centre St,42.322913,-71.100164,False,0
+122,123,126,K32002,Washington Square at Washington St. / Beacon St.,42.339335,-71.13493,False,0
+123,124,127,K32004,JFK Crossing at Harvard St. / Thorndike St.,42.346563,-71.128374,False,0
+124,125,128,M32004,Kendall T at Main St,42.362457,-71.08497,False,0
+125,126,129,M32015,Harvard University River Houses / Plympton St at Memorial Drive,42.369832,-71.118201,False,0
+126,127,130,M32021,Harvard University Gund Hall at Quincy St / Kirkland S,42.376369,-71.114025,False,0
+127,128,131,M32022,Lower Cambridgeport at Magazine St/Riverside Rd,42.356954,-71.113687,False,0
+128,129,132,M32023,Harvard University / SEAS Cruft-Pierce Halls at 29 Oxford St,42.377945,-71.116865,False,0
+129,130,133,M32024,Harvard University Radcliffe Quadrangle at Shepard St / Garden St,42.380287,-71.125107,False,0
+130,131,134,M32025,Mass Ave / Linear Park,42.397828,-71.130516,False,0
+131,132,135,M32026,359 Broadway - Broadway at Fayette Street,42.370803,-71.104412,False,0
+132,133,136,M32027,Biogen Idec - Binney St / Sixth St,42.366095,-71.086388,False,0
+133,134,137,M32029,Porter Square Station,42.387995,-71.119084,False,0
+134,135,138,S32005,Wilson Square,42.385582,-71.113341,False,0
+135,136,139,S32006,Davis Square,42.396969,-71.123024,False,0
+136,137,140,S32007,Ball Square,42.400146,-71.112708,False,0
+137,138,141,S32008,Powder House Circle,42.400877,-71.116772,False,0
+138,139,142,S32009,Packard Ave / Powderhouse Blvd,42.40449,-71.123413,False,0
+139,140,143,S32010,Somerville Hospital at Highland Ave / Crocker St,42.39082,-71.10942,False,0
+140,141,144,S32011,Teele Square at 239 Holland St,42.402763,-71.126908,False,0
+141,142,145,S32012,Summer St at Cutter St,42.394002,-71.120406,False,0

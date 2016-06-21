@@ -90,8 +90,9 @@ section {
 --------------------*/
 
 .navbar-default {
-	background-color: #222;
-	border-color: transparent
+	background-color: #fff;
+	border-color: transparent;
+
 }
 .navbar-default .navbar-brand {
 	color: #fff;
@@ -109,7 +110,7 @@ section {
 	border-color: #fed136
 }
 .navbar-default .navbar-toggle .icon-bar {
-	background-color: #fff
+	background-color: #fff;
 }
 .navbar-default .navbar-toggle:hover,.navbar-default .navbar-toggle:focus {
 	background-color: #fed136

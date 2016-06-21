@@ -8,6 +8,7 @@ sklearn
 flask
 googlemaps
 convertdate
+python-forecastio
 
 # testing to do
 

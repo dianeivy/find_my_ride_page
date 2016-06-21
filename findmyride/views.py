@@ -6,7 +6,7 @@ from a_Model import ModelIt
 import googlemaps
 from datetime import datetime, timedelta
 import numpy as np
-#import forecastio
+import forecastio
 
 
 gmaps = googlemaps.Client(key='AIzaSyDHyED6bTDCiE5ixR3hzkeyONB132AO64s')
@@ -20,16 +20,15 @@ def find_address(address):
 
 
 def get_weather(station_lat, station_lon, start_date):
-    return 20
-    # forecast = forecastio.load_forecast('3609e893742373a7f2fe1ed9464cfd8d', station_lat, station_lon, time=start_date)
-    # return forecast.hourly().data[0].temperature
+    forecast = forecastio.load_forecast('3609e893742373a7f2fe1ed9464cfd8d', station_lat, station_lon, time=start_date)
+    print((forecast.hourly().data[0].temperature - 32) * 5 / 9.)
+    return (forecast.hourly().data[0].temperature - 32) * 5 / 9.
 
-import sys
+
 def find_station_id(address_latitude, address_longitude):
     station_info = pd.DataFrame.from_csv('findmyride/station_info.csv')
     station_info['distance'] = ((station_info['latitude'] - address_latitude) * 111.03) ** 2 + \
                                ((station_info['longitude'] - address_longitude) * 85.39) ** 2
-
     counter = 0
     nearest_stations = []
     nearest_lats = []
@@ -38,7 +37,7 @@ def find_station_id(address_latitude, address_longitude):
     for station_id in station_info.sort_values('distance')['station_id']:
         station_count = pd.DataFrame.from_csv('findmyride/station_count.csv')
         check_station_status = station_count[(station_count['station_id'] == station_id)]
-        if check_station_status['event_count'].values[0] > 100:
+        if check_station_status['event_count'].values[0] > 1000:
             nearest_stations.append(station_id)
             nearest_names.append(station_info[(station_info['station_id'] == station_id)]['station_name'].values[0])
             nearest_lats.append(station_info[(station_info['station_id'] == station_id)]['latitude'].values[0])
@@ -49,7 +48,7 @@ def find_station_id(address_latitude, address_longitude):
     return nearest_stations, nearest_names, nearest_lats, nearest_lons
 
 
-def fix_input_dates(input_date):
+def fix_input_dates_old(input_date):
     if '-' in input_date:
         delim = '-'
     else:
@@ -71,7 +70,23 @@ def fix_input_dates(input_date):
     return datetime(yr, month, day, hour, minute)
 
 
-def find_distance_to_stations(address, nearby_station_lats, nearby_station_lons, leave_time):
+def fix_input_dates(input_date):
+    month = int(input_date[:2])
+    day = int(input_date[3:5])
+    year = int(input_date[6:10])
+    hour = int(input_date[-8:-6])
+    minute = int(input_date[-5:-3])
+    afternoon = input_date[-2:]
+
+    if afternoon.lower() == 'pm' and hour != 12:
+        hour += 12
+    if afternoon.lower() == 'am' and hour == 12:
+        hour = 0
+    print(year, month, day, hour, minute)
+    return datetime(year, month, day, hour, minute)
+
+
+def find_distance_to_stations(address, nearby_station_lats, nearby_station_lons):
     walking_times = []
     for nearby_lat, nearby_lon in zip(nearby_station_lats, nearby_station_lons):
         directions_result = gmaps.distance_matrix(address,
@@ -83,7 +98,7 @@ def find_distance_to_stations(address, nearby_station_lats, nearby_station_lons,
 
 def calculate_bikes(start_address, start_add_lat, start_add_lon, start_date):
     nearest_stations, nearest_names, nearest_lats, nearest_lons = find_station_id(start_add_lat, start_add_lon)
-    walking_times = find_distance_to_stations(start_address, nearest_lats, nearest_lons, start_date)
+    walking_times = find_distance_to_stations(start_address, nearest_lats, nearest_lons)
 
     station_temp = get_weather(start_add_lat, start_add_lon, start_date)
 
@@ -155,10 +170,13 @@ def cesareans_input():
 @app.route('/output')
 def cesareans_output():
   start_address = request.args.get('starting_address')
+  if start_address == '':
+      start_address = 'Boston, MA'
   starting_string = request.args.get('starting_date')
+  print('stating date string', starting_string)
   start_add_lat, start_add_lon = find_address(start_address)
 
-  if starting_string.lower() == 'now':
+  if starting_string.lower() == 'now' or starting_string == '':
     start_date = datetime.now()
   else:
     start_date = fix_input_dates(starting_string)

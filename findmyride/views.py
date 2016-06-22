@@ -96,21 +96,25 @@ def find_distance_to_stations(address, nearby_station_lats, nearby_station_lons)
         walking_times.append(directions_result['rows'][0]['elements'][0]['duration']['value']) ## time in seconds
     return walking_times
 
+
 def calculate_bikes(start_address, start_add_lat, start_add_lon, start_date):
     nearest_stations, nearest_names, nearest_lats, nearest_lons = find_station_id(start_add_lat, start_add_lon)
     walking_times = find_distance_to_stations(start_address, nearest_lats, nearest_lons)
-
+    print(walking_times, start_date)
     station_temp = get_weather(start_add_lat, start_add_lon, start_date)
 
     bike_results = [[] for i in xrange(3)]
     bike_table = []
     better_times = []
     for i in range(0, len(nearest_stations)):
-        model_bike_num, better_time, better_num = ModelIt('Default', station_id=nearest_stations[i], date=start_date, temp=station_temp)
+        print('station ', i, nearest_stations[i])
+        model_bike_num, tmp_better_time, better_num = ModelIt('Default', station_id=nearest_stations[i],
+                                                          date=start_date + timedelta(seconds=walking_times[i]),
+                                                          temp=station_temp)
         if model_bike_num == 0:
             bike_prob = 100
         elif model_bike_num == 1:
-            bike_prob = 0.8
+            bike_prob = 2
         elif model_bike_num == 2:
             bike_prob = 0.2
 
@@ -118,24 +122,23 @@ def calculate_bikes(start_address, start_add_lat, start_add_lon, start_date):
                                                  station_name=nearest_names[i],
                                                  station_lat=nearest_lats[i],
                                                  station_lon=nearest_lons[i],
-                                                 num_bikes=model_bike_num,
-                                                 walking_time=walking_times[i],
-                                                 bike_prob=bike_prob * i,
-                                                 better_time=[start_date + timedelta(minutes=better_time) if better_time != -999 else None][0]))
+                                                 num_bikes=model_bike_num))
 
         bike_table.append(dict(index=nearest_stations[i],
                                station_name=nearest_names[i],
-                               walking_time=int(walking_times[i] / 60.),
+                               walking_time=int(round(walking_times[i] / 60.)),
                                num_bikes=model_bike_num,
                                bike_prob=bike_prob * walking_times[i],
-                               better_time=[start_date + timedelta(minutes=better_time) if better_time != -999 else None][0]))
+                               better_time=[start_date + timedelta(minutes=tmp_better_time) if tmp_better_time != -999 else None][0]))
     return bike_results, bike_table
 
 def bike_list(bike_table_results):
     all_bike_probs = [bike_table_result['bike_prob'] for bike_table_result in bike_table_results]
     top_station_indices = np.argsort(all_bike_probs)
+    print('better_time 0', bike_table_results[0]['better_time'])
+    print('better_time 1', bike_table_results[0]['better_time'])
     better_time_string = None
-    if top_station_indices[0] > 2:
+    if top_station_indices[0] > 0:
         if bike_table_results[0]['better_time']:
             if bike_table_results[0]['better_time'].hour > 13:
                 better_hour = bike_table_results[0]['better_time'].hour - 12
@@ -143,19 +146,20 @@ def bike_list(bike_table_results):
             else:
                 better_hour = bike_table_results[0]['better_time'].hour
                 better_ampm = 'am'
-            better_time_string = "Leave at %d:%d%s to get a bike at %s" %(better_hour,
+            better_time_string = "Leave at %d:%02d %s to get a bike at (%d) %s" %(better_hour,
                                                                           bike_table_results[0]['better_time'].minute,
-                                                                          better_ampm,
+                                                                          better_ampm, bike_table_results[0]['index'],
                                                                           bike_table_results[0]['station_name'])
-        elif bike_table_results[1]['better_time']:
+    elif top_station_indices[0] > 1:
+        if bike_table_results[1]['better_time']:
             if bike_table_results[1]['better_time'].hour > 13:
                 better_hour = bike_table_results[1]['better_time'].hour - 12
                 better_ampm = 'pm'
             else:
                 better_hour = bike_table_results[1]['better_time'].hour
                 better_ampm = 'am'
-            better_time_string = "Leave at %d:%d%s to get a bike at %s" %(better_hour, bike_table_results[1]['better_time'].minute,
-                                                                          better_ampm,
+            better_time_string = "Leave at %d:%02d%s to get a bike at (%d) %s" %(better_hour, bike_table_results[1]['better_time'].minute,
+                                                                          better_ampm, bike_table_results[1]['index'],
                                                                           bike_table_results[1]['station_name'])
 
         print "bts"
@@ -165,22 +169,22 @@ def bike_list(bike_table_results):
 
 @app.route('/')
 def cesareans_input():
-    return render_template("index2.html")
+    return render_template("index3.html")
 
 @app.route('/output')
 def cesareans_output():
   start_address = request.args.get('starting_address')
   if start_address == '':
       start_address = 'Boston, MA'
-  starting_string = request.args.get('starting_date')
-  print('stating date string', starting_string)
   start_add_lat, start_add_lon = find_address(start_address)
 
+  starting_string = request.args.get('starting_date')
+  print('stating date string', starting_string)
   if starting_string.lower() == 'now' or starting_string == '':
     start_date = datetime.now()
   else:
     start_date = fix_input_dates(starting_string)
-  print start_date
+  print(start_date)
 
   bike_results, bike_table = calculate_bikes(start_address, start_add_lat, start_add_lon, start_date)
   bike_table_results, better_time_string = bike_list(bike_table)

@@ -39,6 +39,7 @@ Import Google Fonts
 body {
   margin: 0px;
     font-family: "Open Sans", Sans-serif;
+    background-color: #000000;
 }
 
 h1,
@@ -89,26 +90,28 @@ section {
 --------------------*/
 
 .navbar-default {
-	background-color: #222;
-	border-color: transparent
+	background-color: #fff;
+	border-color: transparent;
+
 }
 .navbar-default .navbar-brand {
-	color: #fff;
+	color: #726FB9;
 	font-family: "Montserrat",sans-serif;
     padding: 0px;
 }
+
 .navbar-default .navbar-brand:hover,.navbar-default .navbar-brand:focus,.navbar-default .navbar-brand:active,.navbar-default .navbar-brand.active {
 	color: #fec503
 }
 .navbar-default .navbar-collapse {
-	border-color: rgba(255,255,255,.02)
+	border-color: rgba(0,0,0,.02)
 }
 .navbar-default .navbar-toggle {
 	background-color: #fed136;
 	border-color: #fed136
 }
 .navbar-default .navbar-toggle .icon-bar {
-	background-color: #fff
+	background-color: #726FB9;
 }
 .navbar-default .navbar-toggle:hover,.navbar-default .navbar-toggle:focus {
 	background-color: #fed136
@@ -165,10 +168,6 @@ section {
 
 /*--------------------
 3. Header
---------------------*/
-
-header {
-    background-image: url(../images/header.jpg);
     background-repeat: none;
     background-attachment: scroll;
     background-position: center center;
@@ -177,11 +176,33 @@ header {
     background-size: cover;
     -o-background-size: cover;
     text-align: center;
-    color: #fff;
+    color: #000000;
+--------------------*/
+
+header {
+    background-image: url(../images/header.jpg);
+	margin-top: 0px;
+	padding-top:0px;
+	text-align:center;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 700px;
+	width: 100%;
+
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
 }
 
 header .intro-text {
-    padding-top: 100px;
+    padding-top: 300px;
     padding-bottom: 50px;
 }
 
@@ -672,22 +693,23 @@ font-size: 11px;
 
 .btn-xl:hover, .btn-xl:focus, .btn-xl:active, .btn-xl.active, .open .dropdown-toggle.btn-xl {
     color: #fff;
-    background-color: #fec503;
+    background-color: #00FFFF;
     border-color: #f6bf01;
 }
 
 .btn:hover, .btn:focus, .btn:active, .btn.active, .open .dropdown-toggle.btn {
-    color: #fff;
+    color: #000000;
     background-color: #fec503;
     border-color: #f6bf01;
 }
 
+/* 46CFE0 */
 .btn {
     display: inline-block;
     padding: 8px 20px;
     margin-bottom: 0;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 800;
     line-height: 1.42857143;
     text-align: center;
     white-space: nowrap;
@@ -702,6 +724,8 @@ font-size: 11px;
     background-image: none;
     border: 1px solid transparent;
     border-radius: 4px;
+    background-color: #46CFE0;
+    color: #fff;
 }
 
 .btn-xl {

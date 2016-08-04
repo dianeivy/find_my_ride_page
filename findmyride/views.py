@@ -9,7 +9,7 @@ import numpy as np
 import forecastio
 
 
-gmaps = googlemaps.Client(key='AIzaSyDHyED6bTDCiE5ixR3hzkeyONB132AO64s')
+gmaps = googlemaps.Client(key=tmp_key)
 
 
 def find_address(address):
